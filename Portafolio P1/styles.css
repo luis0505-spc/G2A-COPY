@@ -1,0 +1,159 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #C4DAD2;
+    color: #16423C;
+}
+.container {
+    margin-left: 80px;
+    padding: 20px;
+}
+
+/* Barra lateral de navegación */
+.sidebar {
+    height: 100%;
+    width: 80px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #16423C;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.sidebar a {
+    display: block;
+    text-align: center;
+    padding: 16px 0;
+    transition: all 0.3s ease;
+    color: #C4DAD2;
+    font-size: 24px;
+}
+.sidebar a:hover {
+    background-color: #6A9C89;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #6A9C89;
+    color: #16423C;
+}
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Sección "Sobre mí" */
+#about {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-out;
+}
+
+/* Galería de proyectos */
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+.project {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+.project img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Sección de contacto */
+#contact {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Pie de página */
+footer {
+    background-color: #16423C;
+    color: #C4DAD2;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+.social-links {
+    margin-top: 10px;
+}
+.social-links a {
+    color: #C4DAD2;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: #6A9C89;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .container {
+        margin-left: 0;
+        padding-top: 80px;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        padding-top: 0;
+    }
+    .sidebar a {
+        float: left;
+        width: 25%;
+        padding: 12px 0;
+        font-size: 18px;
+    }
+    .project {
+        width: calc(50% - 20px);
+    }
+}
+@media(max-width: 500px) {
+    .project {
+        width: 100%;
+    }
+    .sidebar a {
+        width: 25%;
+        padding: 8px 0;
+        font-size: 16px;
+    }
+}
