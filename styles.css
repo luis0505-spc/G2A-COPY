@@ -21,7 +21,7 @@ body {
 
 header {
     background-color: #2b2e38;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
 }
 
@@ -133,7 +133,31 @@ nav ul li a {
 .add-to-cart:hover {
     background-color: #1f2029;
     color: #ffeba7;
-    box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+    box-shadow: 0 8px 24px 0 rgba(16, 39, 112, .2);
+}
+
+footer {
+    background-color: #16423C;
+    color: #C4DAD2;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #C4DAD2;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #6A9C89;
 }
 
 @media (max-width: 768px) {
