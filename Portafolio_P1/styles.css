@@ -1,17 +1,16 @@
-/* Reset */
+/* Estilos globales */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Estilos generales */
 body {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     line-height: 1.7;
-    color: #ffeba7; /* Texto */
-    background-color: #1f2029; /* Fondo */
+    color: #ffeba7;
+    background-color: #1f2029;
 }
 
 .container {
@@ -23,9 +22,9 @@ body {
 
 /* Encabezado */
 header {
-    background-color: #2b2e38; /* Fondo encabezado */
+    background-color: #2b2e38;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 .header-content {
@@ -37,11 +36,10 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #ffeba7; /* Color texto */
+    color: #ffeba7;
     text-decoration: none;
 }
 
-/* Barra de búsqueda */
 .search-bar {
     flex-grow: 1;
     margin: 0 20px;
@@ -50,13 +48,12 @@ header {
 .search-bar input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #333; /* Bordes oscuros */
+    border: 1px solid #3a3d49;
     border-radius: 4px;
-    background-color: #1f2029; /* Fondo barra */
-    color: #ffeba7; /* Texto barra */
+    background-color: #1f2029;
+    color: #ffeba7;
 }
 
-/* Navegación */
 nav ul {
     list-style-type: none;
     display: flex;
@@ -68,28 +65,81 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #ffeba7; /* Texto enlaces */
+    color: #ffeba7;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ff5722; /* Hover enlaces */
+    color: #6A9C89;
+}
+
+/* Barra lateral */
+.sidebar {
+    height: 100%;
+    width: 80px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2b2e38;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    text-align: center;
+    padding: 16px 0;
+    transition: all 0.3s ease;
+    color: #ffeba7;
+    font-size: 24px;
+}
+
+.sidebar a:hover {
+    background-color: #6A9C89;
+}
+
+/* Sección de contacto y otras */
+section {
+    background-color: #2b2e38;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #ffeba7;
+}
+
+#projects .project {
+    background-color: #2b2e38;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 5px;
 }
 
 /* Pie de página */
 footer {
-    background-color: #16423C; /* Fondo pie */
-    color: #C4DAD2; /* Texto pie */
+    background-color: #2b2e38;
+    color: #ffeba7;
     text-align: center;
     padding: 20px;
-}
-
-.social-links {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .social-links a {
-    color: #C4DAD2; /* Color iconos */
+    color: #ffeba7;
     font-size: 1.5em;
     margin: 0 10px;
     text-decoration: none;
@@ -97,67 +147,7 @@ footer {
 }
 
 .social-links a:hover {
-    color: #6A9C89; /* Hover iconos */
-}
-
-/* Sidebar */
-.sidebar {
-    height: 100%;
-    width: 80px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #2b2e38; /* Fondo de la sidebar */
-    overflow-x: hidden;
-    padding-top: 20px;
-    transition: width 0.3s ease;
-}
-
-.sidebar a {
-    display: block;
-    text-align: center;
-    padding: 16px 0;
-    color: #ffeba7; /* Color de los enlaces */
-    font-size: 18px;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.sidebar a:hover {
-    background-color: #ff5722; /* Fondo al pasar el cursor */
-    color: #ffffff; /* Texto al pasar el cursor */
-}
-
-.sidebar.expanded {
-    width: 200px; /* Sidebar expandida */
-}
-
-.sidebar.expanded a {
-    text-align: left;
-    padding-left: 20px;
-    font-size: 16px;
-}
-
-/* Iconos en la sidebar */
-.sidebar a i {
-    font-size: 24px; /* Tamaño de los iconos */
-    margin-right: 10px; /* Espaciado entre icono y texto */
-    vertical-align: middle;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 60px; /* Sidebar más compacta en pantallas pequeñas */
-    }
-
-    .sidebar.expanded {
-        width: 150px; /* Sidebar expandida en pantallas pequeñas */
-    }
-
-    .sidebar a {
-        font-size: 14px; /* Tamaño reducido del texto */
-    }
+    color: #6A9C89;
 }
 
 /* Animaciones */
@@ -181,7 +171,7 @@ footer {
     }
 }
 
-/* Responsive */
+/* Responsividad */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -199,5 +189,34 @@ footer {
 
     nav ul li {
         margin: 5px 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        padding-top: 0;
+    }
+
+    .sidebar a {
+        float: left;
+        width: 25%;
+        padding: 12px 0;
+        font-size: 18px;
+    }
+
+    #projects .project {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 500px) {
+    #projects .project {
+        width: 100%;
+    }
+
+    .sidebar a {
+        padding: 8px 0;
+        font-size: 16px;
     }
 }
