@@ -50,7 +50,7 @@ function register() {
   showMessage("Registro completado");
 
   // Enviar correo usando EmailJS
-  sendMailWithEmailJS(name, email);
+  sendMailWithEmailJS(signupName, signupEmail);
 }
 
 // Login de usuario

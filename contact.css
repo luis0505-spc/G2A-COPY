@@ -136,6 +136,28 @@ nav ul li a {
   box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
 }
 
+/* Pie de página */
+footer {
+  background-color: #16423C;
+  color: #C4DAD2;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+.social-links {
+  margin-top: 10px;
+}
+.social-links a {
+  color: #C4DAD2;
+  font-size: 1.5em;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.social-links a:hover {
+  color: #6A9C89;
+}
+
 @media (max-width: 768px) {
   .header-content {
     flex-direction: column;
