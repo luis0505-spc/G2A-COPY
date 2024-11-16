@@ -1,79 +1,19 @@
-/* Estilos globales */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Estilos generales */
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     line-height: 1.7;
-    color: #ffeba7;
+    margin: 0;
+    padding: 0;
     background-color: #1f2029;
+    color: #ffeba7;
 }
-
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    margin-left: 80px;
+    padding: 20px;
 }
 
-/* Encabezado */
-header {
-    background-color: #2b2e38;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffeba7;
-    text-decoration: none;
-}
-
-.search-bar {
-    flex-grow: 1;
-    margin: 0 20px;
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #3a3d49;
-    border-radius: 4px;
-    background-color: #1f2029;
-    color: #ffeba7;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #ffeba7;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #6A9C89;
-}
-
-/* Barra lateral */
+/* Barra lateral de navegación */
 .sidebar {
     height: 100%;
     width: 80px;
@@ -85,7 +25,6 @@ nav ul li a:hover {
     overflow-x: hidden;
     padding-top: 20px;
 }
-
 .sidebar a {
     display: block;
     text-align: center;
@@ -94,22 +33,41 @@ nav ul li a:hover {
     color: #ffeba7;
     font-size: 24px;
 }
-
 .sidebar a:hover {
-    background-color: #6A9C89;
+    background-color: #4caf50;
 }
 
-/* Sección de contacto y otras */
-section {
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #4caf50;
+    color: #1f2029;
+}
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Sección "Sobre mí" */
+#about {
     background-color: #2b2e38;
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #ffeba7;
+    animation: slideIn 1s ease-out;
 }
 
-#projects .project {
+/* Galería de proyectos */
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+.project {
     background-color: #2b2e38;
     border-radius: 10px;
     padding: 15px;
@@ -118,15 +76,22 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-#projects .project:hover {
+.project:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
-
 .project img {
     width: 100%;
     border-radius: 5px;
+}
+
+/* Sección de contacto */
+#contact {
+    background-color: #2b2e38;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Pie de página */
@@ -137,7 +102,9 @@ footer {
     padding: 20px;
     margin-top: 20px;
 }
-
+.social-links {
+    margin-top: 10px;
+}
 .social-links a {
     color: #ffeba7;
     font-size: 1.5em;
@@ -145,77 +112,48 @@ footer {
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
 .social-links a:hover {
-    color: #6A9C89;
+    color: #4caf50;
 }
 
 /* Animaciones */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
-
 @keyframes slideIn {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
+/* Responsive */
+@media(max-width: 768px) {
+    .container {
+        margin-left: 0;
+        padding-top: 80px;
     }
-
-    .search-bar {
-        margin: 10px 0;
-        width: 100%;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 5px 10px;
-    }
-
     .sidebar {
         width: 100%;
         height: auto;
         position: fixed;
         padding-top: 0;
     }
-
     .sidebar a {
         float: left;
         width: 25%;
         padding: 12px 0;
         font-size: 18px;
     }
-
-    #projects .project {
+    .project {
         width: calc(50% - 20px);
     }
 }
-
-@media (max-width: 500px) {
-    #projects .project {
+@media(max-width: 500px) {
+    .project {
         width: 100%;
     }
-
     .sidebar a {
+        width: 25%;
         padding: 8px 0;
         font-size: 16px;
     }
