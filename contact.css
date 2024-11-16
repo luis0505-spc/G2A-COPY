@@ -12,6 +12,15 @@ body {
   background-color: #1f2029;
 }
 
+/* Sección de contacto */
+#contact {
+  background-color: #2b2e38;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
